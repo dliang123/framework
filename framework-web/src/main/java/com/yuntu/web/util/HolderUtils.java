@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /*
- * Copyright (C), 2012-2014, 上海好屋网信息技术有限公司
+ * Copyright (C), 2012-2014,
  * Author:
  * Date:     15-1-22
  * Description: 模块目的、功能描述      

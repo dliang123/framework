@@ -16,7 +16,7 @@ import java.util.Locale;
 import java.util.Map;
 
 /*
- * Copyright (C), 2012-2014, 上海好屋网信息技术有限公司
+ * Copyright (C), 2012-2014,
  * Author:
  * Date:     14-11-27
  * Description: spring 作用域帮助类

@@ -2,7 +2,7 @@ package com.yuntu.common.img;
 
 
 /*
- * Copyright (C), 2012-2014, 上海好屋网信息技术有限公司
+ * Copyright (C), 2012-2014,
  * Author:
  * Date:     14-12-27
  * Description: 模块目的、功能描述      
