@@ -10,7 +10,7 @@
 		<module>framework-jpa</module>
 		<module>framework-mybatis</module>
 		<module>framework-web</module>
-		<module>framework-push</module>
+		<!--<module>framework-push</module>-->
 		<module>framework-common</module>
 		<module>framework-jdbc</module>
 		<module>framework-dubbo</module>
