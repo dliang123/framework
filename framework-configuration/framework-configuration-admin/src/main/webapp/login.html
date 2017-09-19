@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>配置中心 登陆页面</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="html/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="html/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="html/dist/css/skins/skin-blue.min.css">
+
+    <link rel="stylesheet" href="html/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="html/plugins/datatables/extensions/ColVis/css/dataTables.colVis.css">
+    <link rel="stylesheet" href="html/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.css">
+
+    <style>
+        .aa {
+            border: 1px solid #adadad;
+        }
+        .bb {
+            border: 1px solid #ff0000;
+        }
+        html,
+        body {
+            background-color: #FFFFFF;
+            font-family: "微软雅黑";
+            font-size: 14px;
+            color: #666;
+        }
+        .top {
+            margin: 5px auto 0;
+            height: 70px;
+            border-bottom: 2px solid #F9F9F9;
+        }
+        .top > .container {
+            width: 85%;
+        }
+        .top-logo {
+            width: 130px;
+            height: 61px;
+            background-image: url('http://eccentral.shgqc.ymc.com/images/logo.png');
+            background-repeat: no-repeat;
+        }
+        .top-text {
+            margin-top: 9px;
+            height: 50px;
+            font: bold 2em "fantasy", sans-serif;
+            line-height: 50px;
+            color: #666666;
+            border-left: 2px solid #F9F9F9;
+        }
+        .contain {
+            height: 530px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: auto;
+        }
+        .contain .contain-left {
+            height: 480px;
+            line-height: 480px;
+            text-align: center;
+        }
+        .contain .contain-left img {
+            width: 334px;
+            height: 263px;
+        }
+        .contain .contain-right {
+            height: 430px;
+            text-align: center;
+        }
+        .contain .contain-right .container {
+            width: 312px;
+            height: 430px;
+            margin-top: 15px;
+            margin-left: 0;
+            border-radius: 3px;
+            border: 1px solid #CCCCCC;
+            /*******商家登陆*********/
+            /*******商家登陆*********/
+            /***运营中心与小区：旧**/
+            /***运营中心与小区**/
+        }
+        .contain .contain-right .container .contain-right-text {
+            height: 60px;
+            font: normal 30px "微软雅黑", sans-serif;
+            color: orangered;
+            line-height: 60px;
+            text-align: left;
+        }
+        .contain .contain-right .container .retrievePassword,
+        .contain .contain-right .container .retrievePassword:hover {
+            font-weight: normal;
+            font-size: 14px;
+            font-family: "微软雅黑";
+            color: #427fed;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .contain .contain-right .container .form-group {
+            margin: 25px 0;
+        }
+        .contain .contain-right .container .last,
+        .contain .contain-right .container .hq-last {
+            margin-top: 130px;
+        }
+        .contain .contain-right .container .btn-login {
+            width: 100%;
+        }
+        .contain .contain-right .container .store-citytext > span {
+            font: normal 15px "微软雅黑", sans-serif;
+        }
+        .contain .contain-right .container .store-citytext > a {
+            color: #666666;
+        }
+        .contain .contain-right .container .orangered {
+            font-size: 15px;
+            font-weight: normal;
+            color: orangered;
+        }
+        .contain .contain-right .container .gery {
+            font-size: 15px;
+            font-weight: normal;
+            color: #666666;
+        }
+        .contain .contain-right .container .text-title {
+            font: bold 18px "微软雅黑", sans-serif;
+            height: 60px;
+            color: orangered;
+            line-height: 60px;
+            text-align: center;
+            cursor: default;
+        }
+        .contain .contain-right .container .text-branch,
+        .contain .contain-right .container .text-garden {
+            font: bold 18px "微软雅黑", sans-serif;
+            height: 60px;
+            color: orangered;
+            line-height: 60px;
+            text-align: center;
+            cursor: default;
+            cursor: pointer;
+        }
+        .contain .contain-right .container .border-bottom-orangered {
+            border-bottom: 1px solid orangered;
+        }
+        @media (max-width: 970px) {
+            .contain .contain-left {
+                display: none;
+            }
+            .contain .contain-right {
+                margin-left: 25%;
+            }
+        }
+        .navbar-bottom {
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 16px;
+            border-top: 2px solid #F9F9F9;
+        }
+        /**loading的效果样式**/
+        .dotting {
+            display: inline-block;
+            min-width: 2px;
+            min-height: 2px;
+            box-shadow: 2px 0 currentColor, 6px 0 currentColor, 10px 0 currentColor;
+            -webkit-animation: dot 1s infinite step-start both;
+            animation: dot 1s infinite step-start both;
+        }
+        .dotting:before {
+            content: '...';
+        }
+        /* IE8 */
+        .dotting::before {
+            content: '';
+        }
+        :root .dotting {
+            margin-right: 8px;
+        }
+        /* IE9+,FF,CH,OP,SF */
+        @-webkit-keyframes dot {
+            25% {
+                box-shadow: none;
+            }
+            50% {
+                box-shadow: 2px 0 currentColor;
+            }
+            75% {
+                box-shadow: 2px 0 currentColor, 6px 0 currentColor;
+            }
+        }
+        @keyframes dot {
+            25% {
+                box-shadow: none;
+            }
+            50% {
+                box-shadow: 2px 0 currentColor;
+            }
+            75% {
+                box-shadow: 2px 0 currentColor, 6px 0 currentColor;
+            }
+        }
+        /**TODO：這裡要修改**/
+        #mycity {
+            cursor: pointer;
+        }
+        /*# sourceMappingURL=login.css.map */
+    </style>
+</head>
+
+
+<body>
+
+
+<div class="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2 top-logo"></div>
+            <div class="col-xs-6 top-text">配置中心</div>
+        </div>
+    </div>
+</div>
+<!--描述：中间-->
+<div class="contain">
+    <div class="container">
+        <form class="login-form" action="./service/login?returnUrlhtml/index.html" method="post">
+            <div class="row">
+                <div class="contain-left  col-sm-5 col-sm-offset-1">
+                    <img src="http://eccentral.shgqc.ymc.com/images/login/new-normal-admin.png" />
+                </div>
+                <div class="contain-right col-sm-6 ">
+                    <div class="container">
+                        <div class="clearfix">
+                            <div class="form-horizontal ">
+                                <div class="form-group">
+                                    <div class="col-sm-12 contain-right-text">
+                                        欢迎登陆
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control input-lg" type="text" placeholder="账号" id="usernameOrEmailAddress"
+                                               name="userName" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control input-lg" type="password" id="password" name="password" placeholder="密码">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group">
+                                <div class="col-sm-12 ">
+                                    <button type="submit" class="btn btn-success btn-lg btn-login" id="LoginButton">登 陆</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<nav class="navbar navbar-bottom">
+    上海运图贸易有限公司 版权所有 沪ICP备15014796号
+</nav>
+
+
+
+<script src="html/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="html/plugins/jquery.cookie.js"></script>
+<script src="html/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".login-form").submit(function(){
+            try {
+                var f=$(this);
+                $.post(f.attr("action"), f.serializeArray(),function(r){
+                    if( r.success ){
+                        $.cookie("name", r.data,{path:"/"});
+                        window.top.location="html/index.html";
+                    }else {
+                        alert(r.message)
+                    }
+                } );
+            }catch (e){
+                console.log(e)
+            }finally {
+                return false;
+            }
+        });
+    })
+</script>
+</body>
+html>

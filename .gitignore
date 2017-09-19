@@ -1,0 +1,12 @@
+target
+.idea
+.classpath
+.project
+.settings
+*.iml
+rebel.xml
+application.local.properties
+application.test.local.properties
+application.development.properties
+.DS_Store
+*Backup

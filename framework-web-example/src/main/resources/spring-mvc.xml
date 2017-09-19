@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+	   xmlns:util="http://www.springframework.org/schema/util"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd
+        http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true"/>
+		<property name="locations">
+			<list>
+				<value>classpath:a.properties</value>
+			</list>
+		</property>
+
+		<property name="order" value="2"/>
+	</bean>
+
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true"/>
+		<property name="locations">
+			<list>
+				<value>classpath:b.properties</value>
+			</list>
+		</property>
+
+		<property name="order" value="1"/>
+	</bean>
+
+
+	<!-- mvc 注解扫描 -->
+	<!-- 对web包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 -->
+	<context:component-scan base-package="com.yuntu.web.example.controller" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+
+
+	<mvc:view-resolvers>
+		<mvc:content-negotiation>
+			<mvc:default-views>
+				<bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+					<property name="jsonpParameterNames">
+						<set>
+							<value>jsonp</value>
+							<value>callback</value>
+						</set>
+					</property>
+				</bean>
+			</mvc:default-views>
+		</mvc:content-negotiation>
+	</mvc:view-resolvers>
+
+
+	<bean class="com.yuntu.web.resolver.ResponseBodyResolver">
+		<constructor-arg index="0">
+			<array>
+				<value>jsonp</value>
+				<value>callback</value>
+			</array>
+		</constructor-arg>
+	</bean>
+
+	<bean id="handlerAdapter" class="com.yuntu.web.HandlerAdapter">
+		<property name="includeDefaults" value="false"/>
+
+		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.ResourceHttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+					<property name="objectMapper">
+						<bean class="com.fasterxml.jackson.databind.ObjectMapper"></bean>
+					</property>
+					<property name = "supportedMediaTypes">
+						<list>
+							<value>application/json;charset=UTF-8</value>
+							<value>application/*+json;charset=UTF-8</value>
+							<value>text/javascript;charset=UTF-8</value>
+							<value>text/html;charset=UTF-8</value>
+						</list>
+					</property>
+				</bean>
+				<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+					<property name = "supportedMediaTypes">
+						<list>
+							<value>text/html;charset=UTF-8</value>
+							<value>text/plain;charset=UTF-8</value>
+							<value>text/javascript;charset=UTF-8</value>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<mvc:interceptors>
+			<bean class="com.yuntu.web.interceptor.AnnotationAuthorityInterceptor"></bean>
+			<bean class="com.yuntu.web.interceptor.MonitorInterceptor"></bean>
+	</mvc:interceptors>
+
+	<!-- 会自动注册RequestMappingHandlerMapping与RequestMappingHandlerAdapter
+        两个bean,是spring MVC为@Controllers分发请求所必须的。 并提供了：数据绑定支持，@NumberFormatannotation支持，@DateTimeFormat支持，@Valid支持，读写XML的支持（JAXB），读写JSON的支持（Jackson） -->
+	<mvc:annotation-driven>
+		<!--<mvc:argument-resolvers>-->
+			<!--<bean class="com.yuntu.web.example.controller.A"></bean>-->
+		<!--</mvc:argument-resolvers>-->
+	</mvc:annotation-driven>
+
+</beans>

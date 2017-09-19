@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>配置中心 管理后台</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="ionicons.min.css">
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">-->
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">-->
+
+  <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="plugins/datatables/extensions/ColVis/css/dataTables.colVis.css">
+  <link rel="stylesheet" href="plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.css">
+  <!--<link rel="stylesheet" href="plugins/datatables/extensions/TableTools/css/dataTables.tableTools.css">-->
+  <style>
+    ._colvis{
+      display: inline;
+    }
+  </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <a  class="logo">
+      <span class="logo-mini"><b>配置中心</b></span>
+      <span class="logo-lg"><b>配置中心</b></span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+
+          <li >
+            <a href="#">
+              <span class="hidden-xs __name">  </span>
+            </a>
+          </li>
+
+          <li >
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span id="logout"> 注销 </span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <ul class="sidebar-menu">
+        <li class="header">功能菜单</li>
+        <li class="active">
+          <a href="#user.html"><i class="fa fa-link"></i> <span>用户管理</span></a>
+        </li>
+        <li>
+          <a href="#application.html"><i class="fa fa-link"></i> <span>应用管理</span></a>
+        </li>
+      </ul>
+    </section>
+  </aside>
+
+  <div class="content-wrapper">
+    <section class="content" id="content"></section>
+  </div>
+
+
+  <div class="control-sidebar-bg"></div>
+</div>
+
+
+<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="plugins/jquery.cookie.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+
+<script src="plugins/datatables/jquery.dataTables.js"></script>
+<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<!--<script src="plugins/datatables/extensions/bootstrap/dataTables.bootstrap.js"></script>-->
+<script src="plugins/datatables/extensions/ColVis/js/dataTables.colVis.js"></script>
+<script src="plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.js"></script>
+<script src="plugins/datatables/jquery.dataTables.ext.js"></script>
+
+<!--<script src="plugins/datatables/extensions/TableTools/js/dataTables.tableTools.js"></script>-->
+<script src="dist/js/app.min.js"></script>
+<script>
+
+  $(".__name").html("管理员  " + $.cookie("name") );
+  $("#logout").click(function(){
+    $.post("../service/logout",function(r){
+       r.success ? location.href='../login.html' : alert( r.message );
+    })
+  })
+
+  $("a",".sidebar-menu").click(function(){
+    var url = $(this).attr("href"),
+            $content = $("#content")
+
+    $(this).parent().parent().find(".active").removeClass("active");
+    $(this).parent().addClass("active");
+    if( url.trim() !="#" ){
+      var _url = url.trim().replace("#",""),v="____v"+(new Date().getMilliseconds());
+      if( _url.indexOf("?") >-1 ){
+        _url+=("&"+v);
+      }else {
+        _url+=("?"+v);
+      }
+      $content.load(_url ,function(){
+        $(this).initDataTable()
+      });
+    }
+  });
+
+</script>
+
+</body>
+</html>

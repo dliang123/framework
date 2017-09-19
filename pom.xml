@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.yuntu.framework</groupId>
+	<artifactId>framework-parent</artifactId>
+	<version>1.9.12</version>
+	<modules>
+		<module>framework-validator</module>
+		<module>framework-jpa</module>
+		<module>framework-mybatis</module>
+		<module>framework-web</module>
+		<module>framework-push</module>
+		<module>framework-common</module>
+		<module>framework-jdbc</module>
+		<module>framework-dubbo</module>
+		<module>framework-cgi</module>
+		<module>framework-base</module>
+		<module>framework-configuration</module>
+		<module>framework-web-example</module>
+		<module>framework-redis</module>
+		<module>framework-zookeeper</module>
+		<module>framework-swagger</module>
+		<module>framework-page</module>
+		<module>framework-page-support</module>
+		<module>framework-mq</module>
+		<module>framework-file</module>
+		<module>framework-log4j2</module>
+	</modules>
+	<packaging>pom</packaging>
+
+	<!-- 软件配置管理 -->
+	<!--<scm>-->
+		<!--<connection>scm:git:http://gitlab.private.yaomaiche.app/yuntu-server/yuntu-framework.git</connection>-->
+		<!--<url>scm:git:http://gitlab.private.yaomaiche.app/yuntu-server/yuntu-framework.git</url>-->
+		<!--<developerConnection>scm:git:http://gitlab.private.yaomaiche.app/yuntu-server/yuntu-framework.git</developerConnection>-->
+	  <!--<tag>framework-parent-1.9.9</tag>-->
+  	<!--</scm>-->
+
+	<!-- 设定仓库按设定顺序查�? -->
+	<repositories>
+		<repository>
+			<id>maven</id>
+			<name>Maven Repository</name>
+			<url>http://repo1.maven.org/maven2/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<!-- 设定持续集成发布包服务器 -->
+	<!--<distributionManagement>-->
+		<!--<repository>-->
+			<!--<id>releases</id>-->
+			<!--<name>Team Nexus Release Repository</name>-->
+			<!--<url>http://10.16.36.4:8081/nexus/content/repositories/releases</url>-->
+		<!--</repository>-->
+		<!--<snapshotRepository>-->
+			<!--<id>yuntu-snapshots</id>-->
+			<!--<name>Team Nexus Snapshot Repository</name>-->
+			<!--<url>http://10.16.36.4:8081/nexus/content/repositories/snapshots</url>-->
+			<!--<uniqueVersion>false</uniqueVersion>-->
+		<!--</snapshotRepository>-->
+	<!--</distributionManagement>-->
+
+
+	<properties>
+		<slf4j.version>1.7.13</slf4j.version>
+		<log4j.version>1.2.17</log4j.version>
+		<flume.version>1.6.0</flume.version>
+
+		<spring.version>4.3.6.RELEASE</spring.version>
+		<spring.rabbit.version>1.5.4.RELEASE</spring.rabbit.version>
+		<spring-data-jpa.version>1.10.2.RELEASE</spring-data-jpa.version>
+		<hibernate.version>5.0.3.Final</hibernate.version>
+		<hibernate-validator.version>5.0.3.Final</hibernate-validator.version>
+		<com.rabbitmq.version>3.6.0</com.rabbitmq.version>
+
+		<spring-data-redis.version>1.6.2.RELEASE</spring-data-redis.version>
+		<jedis.version>2.7.3</jedis.version>
+
+		<mybatis-spring.version>1.2.3</mybatis-spring.version>
+		<mybatis.version>3.3.0</mybatis.version>
+
+		<mysql.version>5.1.32</mysql.version>
+		<druid.version>1.0.16</druid.version>
+
+		<guava.version>18.0</guava.version>
+		<commons-fileupload.version>1.3.1</commons-fileupload.version>
+		<commons-beanutils.version>1.9.2</commons-beanutils.version>
+		<httpClient.version>4.5.1</httpClient.version>
+
+		<servlet-api.version>2.5</servlet-api.version>
+		<jstl.version>1.2</jstl.version>
+		<javax.el-api.version>3.0.0</javax.el-api.version>
+		<joda-time.version>2.9.1</joda-time.version>
+		<jackson.version>2.7.4</jackson.version>
+
+		<dubbo.version>2.5.3</dubbo.version>
+		<zookeeper.version>3.4.6</zookeeper.version>
+		<zkclient.version>0.1</zkclient.version>
+		<hessian.version>4.0.38</hessian.version>
+		<jetty.version>6.1.26</jetty.version>
+
+		<aspectjrt.version>1.8.9</aspectjrt.version>
+		<!--<org.apache.curator.version>3.0.0</org.apache.curator.version> -->
+		<org.apache.curator.version>2.9.1</org.apache.curator.version>
+		<org.javassist.version>3.19.0-GA</org.javassist.version>
+		<com.fasterxml.version>1.1.0</com.fasterxml.version>
+		<fastjson.version>1.1.41</fastjson.version>
+	</properties>
+
+	<dependencyManagement>
+
+		<dependencies>
+
+			<!-- 基础组件开始 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-base</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- 基础组件结束 -->
+
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-zookeeper</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<!-- 公共网关组件开始 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-cgi</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- 公共网关组件结束 -->
+
+			<!--公共组件开始 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-common</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- 公共组件结束 -->
+
+			<!-- 配置中心 组件开始 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-configuration</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- 配置中心 组件结束 -->
+
+			<!-- dubbo 组件开始 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-dubbo</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- dubbo 组件结束 -->
+
+			<!-- jdbc 组件结束 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-jdbc</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- jdbc 组件结束 -->
+
+			<!-- jpa 组件开始 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-jpa</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- jpa 组件结束 -->
+
+			<!-- 验证组件开始 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-validator</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- 验证组件结束 -->
+
+			<!-- web组件开始 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-web</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- web组件结束 -->
+
+			<!-- 分页组件开始 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-page</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- 分页组件结束 -->
+
+			<!-- 分页组件支持开始 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-page-support</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- 分页组件支持结束 -->
+
+			<!-- redis 组件开始 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-redis</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-configuration-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-configuration-support</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>redis.clients</groupId>
+				<artifactId>jedis</artifactId>
+				<version>${jedis.version}</version>
+			</dependency>
+
+			<!-- redis 组件结束 -->
+
+			<!-- mybatis 组件开始 -->
+			<dependency>
+				<groupId>com.yuntu.framework</groupId>
+				<artifactId>framework-mybatis</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>${mybatis-spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<!-- mybatis 组件结束 -->
+
+			<!-- dubbo 组件开始 -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>${dubbo.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.zookeeper</groupId>
+				<artifactId>zookeeper</artifactId>
+				<version>${zookeeper.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>lo4j</artifactId>
+						<groupId>log4j</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>junit</artifactId>
+						<groupId>junit</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.sgroschupf</groupId>
+				<artifactId>zkclient</artifactId>
+				<version>${zkclient.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.caucho</groupId>
+				<artifactId>hessian</artifactId>
+				<version>${hessian.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty</artifactId>
+				<version>${jetty.version}</version>
+			</dependency>
+			<!-- dubbo 组件结束 -->
+
+
+
+			<!-- log 组件开始 -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jboss.logging</groupId>
+				<artifactId>jboss-logging</artifactId>
+				<version>3.3.0.Final</version>
+			</dependency>
+			<!-- log 组件结束 -->
+
+
+			<!-- 常用工具 开始 -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>${httpClient.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpmime</artifactId>
+				<version>${httpClient.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>${commons-beanutils.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>${commons-fileupload.version}</version>
+			</dependency>
+			<!-- 常用工具 结束 -->
+
+
+			<!-- 验证组件开始 -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>${hibernate-validator.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator-cdi</artifactId>
+				<version>${hibernate-validator.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.el</groupId>
+				<artifactId>javax.el-api</artifactId>
+				<version>${javax.el-api.version}</version>
+			</dependency>
+			<!-- 验证组件 结束 -->
+
+			<!-- servlet 组件开始 -->
+			<dependency>
+				<groupId>jstl</groupId>
+				<artifactId>jstl</artifactId>
+				<version>${jstl.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${servlet-api.version}</version>
+			</dependency>
+
+
+			<!-- servlet 组件结束 -->
+
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>${joda-time.version}</version>
+			</dependency>
+
+
+			<!-- spring 组件开始 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-oxm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aspects</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.batch</groupId>
+				<artifactId>spring-batch-infrastructure</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.amqp</groupId>
+				<artifactId>spring-rabbit</artifactId>
+				<version>${spring.rabbit.version}</version>
+			</dependency>
+
+			<!-- spring 组件结束 -->
+
+
+			<!-- spring data 组件开始 -->
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-jpa</artifactId>
+				<version>${spring-data-jpa.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-redis</artifactId>
+				<version>${spring-data-redis.version}</version>
+			</dependency>
+			<!-- spring data 组件结束 -->
+
+
+
+			<!-- 数据源和驱动组件开始 -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.sqljdbc4</groupId>
+				<artifactId>sqljdbc4</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<!-- 数据源和驱动组件结束 -->
+
+			<!-- hibernate 组件开始 -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			<!-- hibernate 组件结束 -->
+
+
+			<!-- json 组件开始 -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml</groupId>
+				<artifactId>classmate</artifactId>
+				<version>${com.fasterxml.version}</version>
+
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+
+			<!-- json 组件结束 -->
+
+			<dependency>
+				<groupId>org.apache.curator</groupId>
+				<artifactId>curator-framework</artifactId>
+				<version>${org.apache.curator.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>${org.javassist.version}</version>
+			</dependency>
+
+			<!-- rabbitmq -->
+			<dependency>
+				<groupId>com.rabbitmq</groupId>
+				<artifactId>amqp-client</artifactId>
+				<version>${com.rabbitmq.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.aliyun.oss</groupId>
+				<artifactId>aliyun-sdk-oss</artifactId>
+				<version>2.0.6</version>
+			</dependency>
+		</dependencies>
+
+	</dependencyManagement>
+
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- release相关插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5.3</version>
+					<configuration>
+						<arguments>${release.arguments}</arguments>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-scm-plugin</artifactId>
+					<version>1.9.5</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>versions-maven-plugin</artifactId>
+					<version>2.3</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<!-- 源码插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- 解决编译乱码 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<encoding>utf-8</encoding>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+</project>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <properties>
+        <property name="file_path">${sys:catalina.home}/logs</property>
+        <property name="app_env">prod-n</property>
+        <property name="app_name">master-api</property>
+    </properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[${app_name}:][%t][%p][%d{yyyy-MM-dd HH\:mm\:ss,SSS}]-[%r][%l]%m%n"/>
+        </Console>
+        <RollingFile name="debug" fileName="${file_path}/${app_name}/debug.log"
+                     filePattern="${file_path}/${app_name}/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>[%t][%p][%d{yyyy-MM-dd HH\:mm\:ss,SSS}]-[%r][%l]%m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="12" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy max="40"/>
+        </RollingFile>
+        <RollingFile name="info" fileName="${file_path}/${app_name}/info.log"
+                     filePattern="${file_path}/${app_name}/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>[%t][%p][%d{yyyy-MM-dd HH\:mm\:ss,SSS}]-[%r][%l]%m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="12" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy max="40"/>
+        </RollingFile>
+        <RollingFile name="error" fileName="${file_path}/${app_name}/error.log"
+                     filePattern="${file_path}/${app_name}/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>[%t][%p][%d{yyyy-MM-dd HH\:mm\:ss,SSS}]-[%r][%l]%m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="12" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy max="40"/>
+        </RollingFile>
+        <SMTP name="mail_api" subject="Car-${app_name}-Error-${app_env}" to="jackzhang@yaomaiche.com,icewang@yaomaiche.com" from="jackzhang@yaomaiche.com"
+              smtpHost="smtp.exmail.qq.com" smtpPort="25" bufferSize="512" replyTo="jackzhang@yaomaiche.com" smtpDebug="false" smtpUsername="jackzhang@yaomaiche.com" smtpPassword="******"
+              layout="[%t][%p][%d{yyyy-MM-dd HH\:mm\:ss,SSS}]-[%r][%l]%m%n"
+                >
+        </SMTP>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.yuntu" level="error">
+            <AppenderRef ref="error"/>
+            <AppenderRef ref="mail_api"/>
+        </Logger>
+        <Root level="INFO">
+            <AppenderRef ref="info"/>
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
