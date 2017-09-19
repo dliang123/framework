@@ -4,7 +4,7 @@ import com.yuntu.configuration.Switch;
 import com.yuntu.configuration.SwitchManager;
 
 /**
- * Created by linxiaohui on 16/1/26.
+ *  16/1/26.
  */
 public class Config {
 

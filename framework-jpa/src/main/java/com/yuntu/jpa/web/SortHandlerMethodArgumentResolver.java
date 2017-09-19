@@ -9,7 +9,7 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by linxiaohui on 2016/10/25.
+ *  2016/10/25.
  */
 public class SortHandlerMethodArgumentResolver extends org.springframework.data.web.SortHandlerMethodArgumentResolver  {
 

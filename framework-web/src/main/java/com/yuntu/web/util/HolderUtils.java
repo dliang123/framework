@@ -7,12 +7,12 @@ import javax.servlet.http.HttpServletResponse;
 
 /*
  * Copyright (C), 2012-2014, 上海好屋网信息技术有限公司
- * Author:   林晓辉
+ * Author:
  * Date:     15-1-22
  * Description: 模块目的、功能描述      
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           15-1-22           00000001         创建文件
+ *            15-1-22           00000001         创建文件
  *
  */
 public class HolderUtils {

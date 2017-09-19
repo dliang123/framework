@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * 高地位算法 id 生成器
- * Created by 林晓辉 on 2015/3/5.
+ * Created by  on 2015/3/5.
  */
 public class SequenceHiLoGenerator {
 

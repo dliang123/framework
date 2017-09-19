@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 
 /**
- * Created by linxiaohui on 16/1/15.
+ *  16/1/15.
  */
 @Component
 public class ResponseProcess implements ResponseProcessor {

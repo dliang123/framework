@@ -13,7 +13,7 @@ import com.yuntu.common.utils.JSONUtils;
 import com.yuntu.common.utils.StringUtils;
 
 /**
- * Created by linxiaohui on 15/11/11.
+ *  15/11/11.
  */
 public class Response {
 

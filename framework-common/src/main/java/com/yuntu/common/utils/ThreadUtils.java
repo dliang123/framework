@@ -1,7 +1,7 @@
 package com.yuntu.common.utils;
 
 /**
- * Created by linxiaohui on 15/11/11.
+ *  15/11/11.
  */
 public class ThreadUtils {
 

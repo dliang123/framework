@@ -1,7 +1,7 @@
 package com.yuntu.base;
 
 /**
- * Created by linxiaohui on 2016/11/7.
+ *  2016/11/7.
  */
 public enum  CommonStatus implements Status{
 

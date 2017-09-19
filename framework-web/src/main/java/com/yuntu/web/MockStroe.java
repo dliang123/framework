@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /*
- * Author:   林晓辉
+ * Author:
  * Date:     14-11-6
  * Description: 模块目的、功能描述      
  * History: 变更记录

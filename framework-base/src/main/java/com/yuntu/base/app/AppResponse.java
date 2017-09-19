@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.yuntu.base.BusinessException;
 
 /**
- * @author icewang
+ * @author
  * @date 2016年12月27日
  */
 @JsonInclude(Include.NON_NULL)

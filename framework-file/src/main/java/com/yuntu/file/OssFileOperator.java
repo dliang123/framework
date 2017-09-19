@@ -9,7 +9,7 @@ import com.aliyun.oss.model.ObjectMetadata;
 import com.aliyun.oss.model.PutObjectResult;
 
 /**
- * @author icewang
+ * @author
  * @date 2017年1月12日
  */
 public class OssFileOperator implements FileOperator {

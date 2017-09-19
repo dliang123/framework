@@ -1,7 +1,7 @@
 package com.yuntu.base;
 
 /**
- * Created by linxiaohui on 15/12/10.
+ *  15/12/10.
  */
 @SuppressWarnings("serial")
 public abstract class BusinessRuntimeException extends RuntimeException {

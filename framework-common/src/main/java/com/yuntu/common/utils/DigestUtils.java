@@ -6,7 +6,7 @@ import java.security.MessageDigest;
 
 /**
  * 加密工具
- * Created by 林晓辉 on 2015/5/1.
+ * Created by  on 2015/5/1.
  */
 public class DigestUtils {
 

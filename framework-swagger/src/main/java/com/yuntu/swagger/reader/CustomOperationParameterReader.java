@@ -1,10 +1,10 @@
 /**
  * <p>Copyright:Copyright(c) 2016</p>
- * <p>Company:上海运图投资有限公司</p>
+ * <p>Company:</p>
  * <p>包名:com.yuntu.swagger.reader</p>
  * <p>文件名:CustomOperationParameterReader.java</p>
  * <p>类更新历史信息</p>
- * @todo <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a> 创建于 2016年3月9日 下午4:51:30
+ * @todo  创建于 2016年3月9日 下午4:51:30
  */
 package com.yuntu.swagger.reader;
 
@@ -33,10 +33,10 @@ import com.yuntu.swagger.bean.DefaultParameters;
 /**
  * swagger插件请求参数读取
  * <p>
- * Company:上海运图投资有限公司
+ * Company:
  * </p>
  * 
- * @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a>
+ * @author
  * @date 2016年3月9日 下午4:51:30
  * @version 1.0.2016
  */
@@ -51,7 +51,7 @@ public class CustomOperationParameterReader implements RequestMappingReader {
 	 * 
 	 * @see com.mangofactory.swagger.readers.Command#execute(java.lang.Object)
 	 * 
-	 * @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a>
+	 * @author
 	 * 
 	 * @date 2016年3月9日 下午4:57:42
 	 */

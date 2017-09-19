@@ -18,12 +18,12 @@ import java.io.IOException;
 import java.util.Objects;
 
 /*
- * Author:   林晓辉
+ * Author:
  * Date:     14-11-6
  * Description: 共享session的过滤器
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           14-11-6           00000001         创建文件
+ *            14-11-6           00000001         创建文件
  *
  */
 public class ShareSessionFilter implements Filter{

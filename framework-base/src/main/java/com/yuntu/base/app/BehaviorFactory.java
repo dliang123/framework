@@ -4,7 +4,7 @@ package com.yuntu.base.app;
 import java.util.Map;
 
 /**
- * @author icewang
+ * @author
  * @date 2016年12月27日
  */
 public abstract class BehaviorFactory {

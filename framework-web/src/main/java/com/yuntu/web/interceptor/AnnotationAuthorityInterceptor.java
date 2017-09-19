@@ -22,7 +22,7 @@ import java.util.Map;
 
 /**
  * 基于注解的 权限拦截器
- * Created by linxiaohui on 15/11/12.
+ *  15/11/12.
  */
 public class AnnotationAuthorityInterceptor extends HandlerInterceptorAdapter implements org.springframework.context.ApplicationListener<ContextRefreshedEvent> {
 

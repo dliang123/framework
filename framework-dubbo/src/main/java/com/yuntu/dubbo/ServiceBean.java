@@ -4,7 +4,7 @@ import javax.annotation.PostConstruct;
 import java.util.Map;
 
 /**
- * Created by 林晓辉 on 2014/10/22.
+ * Created by  on 2014/10/22.
  */
 @SuppressWarnings({ "rawtypes", "serial","unchecked" })
 public class ServiceBean extends com.alibaba.dubbo.config.spring.ServiceBean {

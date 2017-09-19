@@ -18,7 +18,7 @@ import java.util.Map;
  * 邮件请通过 log4j.xml 配置成异步发送
  *    monitor_exception  为异常发送邮件
  *    monitor_timeout    为超时发送邮件
- * Created by linxiaohui on 15/11/16.
+ *  15/11/16.
  */
 public class MonitorInterceptor extends HandlerInterceptorAdapter {
 

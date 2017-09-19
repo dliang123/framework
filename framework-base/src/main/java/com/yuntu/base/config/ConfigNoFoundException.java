@@ -1,7 +1,7 @@
 package com.yuntu.base.config;
 
 /**
- * Created by linxiaohui on 15/11/11.
+ *  15/11/11.
  */
 @SuppressWarnings("serial")
 public class ConfigNoFoundException extends RuntimeException {

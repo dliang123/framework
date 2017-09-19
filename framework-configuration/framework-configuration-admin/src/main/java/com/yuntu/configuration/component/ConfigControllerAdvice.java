@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * Created by linxiaohui on 15/11/12.
+ *  15/11/12.
  */
 @ControllerAdvice
 public class ConfigControllerAdvice {

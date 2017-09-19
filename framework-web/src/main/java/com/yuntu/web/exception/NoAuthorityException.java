@@ -1,7 +1,7 @@
 package com.yuntu.web.exception;
 
 /**
- * Created by linxiaohui on 15/11/12.
+ *  15/11/12.
  */
 @SuppressWarnings("serial")
 public class NoAuthorityException extends RuntimeException {

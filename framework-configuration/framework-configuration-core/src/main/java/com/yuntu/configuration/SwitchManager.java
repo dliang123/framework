@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Created by linxiaohui on 16/1/13.
+ *  16/1/13.
  */
 public class SwitchManager {
 

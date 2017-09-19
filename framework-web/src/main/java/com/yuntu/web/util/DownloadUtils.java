@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /*
- * Author:   林晓辉
+ * Author:
  * Date:     14-11-4
  * Description: 文件下载工具类 支持多浏览器[chrome,firefox,ie,safari]中文与空格 {
  * History: 变更记录

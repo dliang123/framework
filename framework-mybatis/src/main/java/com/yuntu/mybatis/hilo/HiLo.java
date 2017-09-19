@@ -7,7 +7,7 @@ import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
- * Created by 林晓辉 on 2015/3/5.
+ * Created by  on 2015/3/5.
  * 高地位算法 id 注解
  */
 @Target(TYPE)

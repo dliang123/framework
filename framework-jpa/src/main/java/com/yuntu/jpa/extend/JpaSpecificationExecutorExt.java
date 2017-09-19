@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * 扩展支持 ISpecification
- * Created by linxiaohui on 2016/10/31.
+ *  2016/10/31.
  */
 public interface JpaSpecificationExecutorExt<T> extends JpaSpecificationExecutor<T> {
 

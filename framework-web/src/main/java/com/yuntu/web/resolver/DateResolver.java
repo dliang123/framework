@@ -11,7 +11,7 @@ import java.text.ParseException;
 import java.util.Date;
 
 /**
- * Created by linxiaohui on 15/11/12.
+ *  15/11/12.
  */
 @ControllerAdvice
 public class DateResolver {

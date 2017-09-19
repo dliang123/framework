@@ -15,12 +15,12 @@ import java.util.Iterator;
 import java.util.Set;
 
 /*
- * Author:   林晓辉
+ * Author:
  * Date:     15-1-23
  * Description: 模块目的、功能描述      
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           15-1-23           00000001         创建文件
+ *            15-1-23           00000001         创建文件
  *
  */
 public class ValidateUtils {

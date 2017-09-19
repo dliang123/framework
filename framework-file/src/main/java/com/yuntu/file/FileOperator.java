@@ -4,7 +4,7 @@ package com.yuntu.file;
 import java.io.InputStream;
 
 /**
- * @author icewang
+ * @author
  * @date 2017年1月12日
  */
 public interface FileOperator {

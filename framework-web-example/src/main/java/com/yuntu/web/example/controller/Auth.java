@@ -7,7 +7,7 @@ import com.yuntu.web.util.WebUtils;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by linxiaohui on 15/11/13.
+ *  15/11/13.
  */
 @Component
 public class Auth implements AuthorityProcess {

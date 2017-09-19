@@ -4,7 +4,7 @@ import com.yuntu.base.utils.ConfigUtils;
 import org.springframework.beans.factory.annotation.Value;
 
 /**
- * Created by linxiaohui on 16/1/11.
+ *  16/1/11.
  */
 public class B {
 

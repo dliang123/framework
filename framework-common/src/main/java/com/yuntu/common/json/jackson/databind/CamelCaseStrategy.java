@@ -1,10 +1,10 @@
 /**
  * <p>Copyright:Copyright(c) 2016</p>
- * <p>Company:上海运图投资有限公司</p>
+ * <p>Company:</p>
  * <p>包名:com.yuntu.common.json.jackson.databind</p>
  * <p>文件名:CamelCaseStrategy.java</p>
  * <p>类更新历史信息</p>
- * @todo <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a> 创建于 2016年3月11日 下午2:08:07
+ * @todo  创建于 2016年3月11日 下午2:08:07
  */
 package com.yuntu.common.json.jackson.databind;
 
@@ -12,8 +12,8 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy.PropertyNamingStrat
 
 /** 
  * 驼峰命名策略
- * <p>Company:上海运图投资有限公司</p>
- * @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a> 
+ * <p>Company:</p>
+ * @author
  * @date 2016年3月11日 下午2:08:07 
  * @version 1.0.2016
  */
@@ -23,7 +23,7 @@ public class CamelCaseStrategy extends PropertyNamingStrategyBase{
 
 	/* (non-Javadoc)
 	 * @see com.fasterxml.jackson.databind.PropertyNamingStrategy.PropertyNamingStrategyBase#translate(java.lang.String)
-	 * @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a>
+	 * @author
 	 * @date 2016年3月11日 下午2:08:43
 	 */
 	@Override

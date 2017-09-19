@@ -12,12 +12,12 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import javax.servlet.http.HttpServletRequest;
 
 /*
- * Author:   林晓辉
+ * Author:
  * Date:     14-11-27
  * Description: 文件上传组件
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           14-11-27           00000001         创建文件
+ *            14-11-27           00000001         创建文件
  *
  */
 public class MultipartResolver extends CommonsMultipartResolver {

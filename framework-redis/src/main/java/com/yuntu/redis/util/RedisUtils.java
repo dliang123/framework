@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * redis 操作工具类
- * Created by 林晓辉 on 2014/10/9.
+ * Created by  on 2014/10/9.
  */
 @SuppressWarnings({"unchecked","rawtypes"})
 public class RedisUtils {

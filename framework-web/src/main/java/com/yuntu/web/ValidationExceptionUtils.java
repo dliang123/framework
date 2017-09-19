@@ -14,7 +14,7 @@ import javax.validation.ValidationException;
 import java.util.Map;
 
 /**
- * Created by linxiaohui on 15/12/2.
+ *  15/12/2.
  */
 public class ValidationExceptionUtils {
 

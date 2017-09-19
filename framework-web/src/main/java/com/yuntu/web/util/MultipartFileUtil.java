@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
- * Created by 林晓辉 on 2014/9/26.
+ * Created by  on 2014/9/26.
  */
 public class MultipartFileUtil {
 

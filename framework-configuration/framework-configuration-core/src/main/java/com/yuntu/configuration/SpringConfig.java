@@ -15,7 +15,7 @@ import org.springframework.util.StringUtils;
 import java.util.Objects;
 
 /**
- * Created by linxiaohui on 16/1/8.
+ *  16/1/8.
  */
 @Lazy(false)
 @Component(SpringConfig.NAME)

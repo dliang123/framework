@@ -6,7 +6,7 @@ import java.sql.SQLException;
 /**
  * -2 参数错误
  * -3 重复提交的请求
- * Created by linxiaohui on 15/12/4.
+ *  15/12/4.
  */
 public final class Response<T> implements Serializable {
 

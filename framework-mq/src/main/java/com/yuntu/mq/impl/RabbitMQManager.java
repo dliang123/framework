@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 import com.yuntu.mq.ExchangeType;
 
 /**
- * @author icewang
+ * @author
  * @date 2016年3月25日
  */
 @Component

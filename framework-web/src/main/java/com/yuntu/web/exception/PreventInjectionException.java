@@ -2,7 +2,7 @@ package com.yuntu.web.exception;
 
 
 /*
- * Author:   林晓辉
+ * Author:
  * Date:     14-11-6
  * Description: 防注入的运行时异常
  * History: 变更记录

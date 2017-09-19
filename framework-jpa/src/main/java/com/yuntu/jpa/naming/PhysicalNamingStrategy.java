@@ -7,7 +7,7 @@ import org.hibernate.engine.jdbc.env.spi.JdbcEnvironment;
 import java.util.Objects;
 
 /**
- * Created by linxiaohui on 15/12/3.
+ *  15/12/3.
  */
 @SuppressWarnings("serial")
 public class PhysicalNamingStrategy extends PhysicalNamingStrategyStandardImpl {

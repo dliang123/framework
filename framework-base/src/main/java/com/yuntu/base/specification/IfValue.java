@@ -1,7 +1,7 @@
 package com.yuntu.base.specification;
 
 /**
- * Created by linxiaohui on 2017/4/19.
+ *  2017/4/19.
  */
 public interface IfValue {
 

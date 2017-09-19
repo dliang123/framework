@@ -9,12 +9,12 @@ import com.yuntu.web.exception.NoLoginException;
 import java.io.Serializable;
 
 /*
- * Author:   林晓辉
+ * Author:
  * Date:     14-11-28
  * Description: 模块目的、功能描述      
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           14-11-28           00000001         创建文件
+ *            14-11-28           00000001         创建文件
  *
  */
 public class DefaultCurrentUserImpl implements ICurrentUser<Long,Serializable> {

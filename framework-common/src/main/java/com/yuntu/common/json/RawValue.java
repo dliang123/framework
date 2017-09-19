@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import java.io.Serializable;
 
 /**
- * Created by linxiaohui on 15/11/12.
+ *  15/11/12.
  */
 @SuppressWarnings("serial")
 public class RawValue implements Serializable{

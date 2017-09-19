@@ -5,7 +5,7 @@ import com.yuntu.jpa.AuditEntity;
 import javax.persistence.*;
 
 /**
- * Created by linxiaohui on 16/1/14.
+ *  16/1/14.
  */
 @SuppressWarnings("serial")
 @Entity

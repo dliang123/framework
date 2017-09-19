@@ -23,13 +23,13 @@ import java.util.SortedSet;
 
 /*
  * Copyright (C), 2012-2014
- * Author:   林晓辉
+ * Author:
  * Date:     14-11-27
  * Description: 实体侦听实现插件( 需启用此插件才能使用 实体侦听功能 ),
  *              依托 spring 容器,所有实现侦听器接口的自动注册
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           14-11-27           00000001         创建文件
+ *            14-11-27           00000001         创建文件
  *
  */
 @Intercepts({

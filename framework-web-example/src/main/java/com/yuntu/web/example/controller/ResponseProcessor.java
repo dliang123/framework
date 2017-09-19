@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 
 /**
- * Created by linxiaohui on 15/11/16.
+ *  15/11/16.
  */
 @Component
 public class ResponseProcessor implements com.yuntu.web.processor.ResponseProcessor{

@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * Created by linxiaohui on 16/1/12.
+ *  16/1/12.
  */
 public abstract class DynamicUpdateWatched {
 

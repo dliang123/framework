@@ -8,7 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Created by linxiaohui on 15/12/8.
+ *  15/12/8.
  */
 public class CompensationUtils {
 

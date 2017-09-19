@@ -40,7 +40,7 @@ import com.yuntu.web.request.BodyReaderHttpServletRequestWrapper;
 import com.yuntu.web.util.ApplicationContextUtils;
 
 /**
- * Created by linxiaohui on 15/11/12.
+ *  15/11/12.
  */
 public class HandlerAdapter extends RequestMappingHandlerAdapter {
 

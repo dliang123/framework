@@ -13,7 +13,7 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * Created by linxiaohui on 15/11/16.
+ *  15/11/16.
  */
 public class DegradeProcessor {
 

@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * Created by linxiaohui on 16/1/12.
+ *  16/1/12.
  */
 public class DynamicUpdateConfigurer extends ImmutableConfigurer implements DynamicUpdateWatcher  {
 

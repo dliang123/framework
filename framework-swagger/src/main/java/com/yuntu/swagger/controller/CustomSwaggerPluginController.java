@@ -1,10 +1,10 @@
 /**
  * <p>Copyright:Copyright(c) 2016</p>
- * <p>Company:上海运图投资有限公司</p>
+ * <p>Company:</p>
  * <p>包名:com.yuntu.swagger.controller</p>
  * <p>文件名:CustomSwaggerPluginController.java</p>
  * <p>类更新历史信息</p>
- * @todo <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a> 创建于 2016年3月9日 下午3:12:00
+ * @todo  创建于 2016年3月9日 下午3:12:00
  */
 package com.yuntu.swagger.controller;
 
@@ -28,8 +28,8 @@ import com.yuntu.base.utils.ConfigUtils;
 
 /** 
  * swagger插件控制器
- * <p>Company:上海运图投资有限公司</p>
- * @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a> 
+ * <p>Company:</p>
+ * @author
  * @date 2016年3月9日 下午3:12:00 
  * @version 1.0.2016
  */

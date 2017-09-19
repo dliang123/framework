@@ -3,7 +3,7 @@ package com.yuntu.page;
 import java.io.Serializable;
 
 /**
- * Created by linxiaohui on 16/1/4.
+ *  16/1/4.
  */
 public class PageRequestCustom implements Serializable{
 

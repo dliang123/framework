@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.AbstractJsonpResponseBodyAdvice;
 
 /**
- * Created by linxiaohui on 15/11/12.
+ *  15/11/12.
  */
 @ControllerAdvice
 public class ResponseBodyResolver extends AbstractJsonpResponseBodyAdvice {

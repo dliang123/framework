@@ -2,12 +2,12 @@ package com.yuntu.common.img;
 
 /*
  * Copyright (C), 2012-2014, 上海好屋网信息技术有限公司
- * Author:   林晓辉
+ * Author:
  * Date:     14-12-27
  * Description: 模块目的、功能描述      
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           14-12-27           00000001         创建文件
+ *            14-12-27           00000001         创建文件
  *
  */
 public abstract class Size {

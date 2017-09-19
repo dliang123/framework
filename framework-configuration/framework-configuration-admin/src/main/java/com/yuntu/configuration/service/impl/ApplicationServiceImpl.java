@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Created by linxiaohui on 16/1/14.
+ *  16/1/14.
  */
 @Service
 public class ApplicationServiceImpl implements ApplicationService{

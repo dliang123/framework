@@ -38,7 +38,7 @@ import java.util.Map;
  *          则查询为  where ( name = '小明' OR name = '小红')
  *
  *
- * Created by linxiaohui on 2016/10/26.
+ *  2016/10/26.
  */
 public class SpecificationHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {
 

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 
 /**
- * Created by linxiaohui on 15/11/12.
+ *  15/11/12.
  */
 public class JSONUtils {
 

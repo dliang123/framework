@@ -8,12 +8,12 @@ import org.apache.ibatis.scripting.defaults.DefaultParameterHandler;
 
 /*
  * Copyright (C), 2012-2014
- * Author:   林晓辉
+ * Author:
  * Date:     14-10-23
  * Description: 模块目的、功能描述      
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           14-10-23           00000001         创建文件
+ *            14-10-23           00000001         创建文件
  *
  */
 public class MybatisUtils {

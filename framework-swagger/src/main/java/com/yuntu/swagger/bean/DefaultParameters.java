@@ -1,10 +1,10 @@
 /**
  * <p>Copyright:Copyright(c) 2016</p>
- * <p>Company:上海运图投资有限公司</p>
+ * <p>Company:</p>
  * <p>包名:com.yuntu.swagger.bean</p>
  * <p>文件名:DefaultParameters.java</p>
  * <p>类更新历史信息</p>
- * @todo <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a> 创建于 2016年3月11日 下午4:22:53
+ * @todo  创建于 2016年3月11日 下午4:22:53
  */
 package com.yuntu.swagger.bean;
 
@@ -14,8 +14,8 @@ import com.mangofactory.swagger.models.dto.AllowableValues;
 
 /** 
  * 中文类名
- * <p>Company:上海运图投资有限公司</p>
- * @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a> 
+ * <p>Company:</p>
+ * @author
  * @date 2016年3月11日 下午4:22:53 
  * @version 1.0.2016
  */

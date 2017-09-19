@@ -21,7 +21,7 @@ import org.springframework.util.Assert;
 import java.util.List;
 
 /**
- * Created by linxiaohui on 16/1/25.
+ *  16/1/25.
  */
 @Service
 public class ConfigServiceImpl implements ConfigService {

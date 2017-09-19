@@ -17,12 +17,12 @@ import java.util.Map;
 
 /*
  * Copyright (C), 2012-2014, 上海好屋网信息技术有限公司
- * Author:   林晓辉
+ * Author:
  * Date:     14-11-27
  * Description: spring 作用域帮助类
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           14-11-27           00000001         创建文件
+ *            14-11-27           00000001         创建文件
  *
  */
 @Lazy(false)

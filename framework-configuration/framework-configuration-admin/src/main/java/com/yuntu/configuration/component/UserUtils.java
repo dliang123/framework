@@ -7,7 +7,7 @@ import com.yuntu.web.util.WebUtils;
 import org.springframework.data.domain.AuditorAware;
 
 /**
- * Created by linxiaohui on 16/1/14.
+ *  16/1/14.
  */
 public class UserUtils implements ICurrentUser<Long,UserEntity> , AuditorAware<Long> {
 

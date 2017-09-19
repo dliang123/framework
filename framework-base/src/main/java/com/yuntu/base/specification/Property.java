@@ -1,7 +1,7 @@
 package com.yuntu.base.specification;
 
 /**
- * Created by linxiaohui on 2017/4/11.
+ *  2017/4/11.
  */
 public class Property {
 

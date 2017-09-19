@@ -6,12 +6,12 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /*
- * Author:   林晓辉
+ * Author:
  * Date:     14-12-26
  * Description: 根据区域编码获取地址
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           14-12-26           00000001         创建文件
+ *            14-12-26           00000001         创建文件
  *
  */
 public class AreaCodeUtils {

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Map;
 
 /**
- * Created by linxiaohui on 15/11/13.
+ *  15/11/13.
  */
 @Controller
 @RequestMapping("test")

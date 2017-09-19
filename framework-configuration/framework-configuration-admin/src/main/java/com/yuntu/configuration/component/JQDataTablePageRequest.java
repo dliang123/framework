@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by linxiaohui on 16/1/15.
+ *  16/1/15.
  */
 public class JQDataTablePageRequest implements Pageable {
 

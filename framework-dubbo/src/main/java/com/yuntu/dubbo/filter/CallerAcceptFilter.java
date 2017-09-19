@@ -7,7 +7,7 @@ import com.yuntu.base.user.CurrentUserHelp;
 
 /*
  * Copyright (C), 2012-2014
- * Author:   林晓辉
+ * Author:
  * Date:     14-11-28
  * Description: 模块目的、功能描述      
  * History: 变更记录

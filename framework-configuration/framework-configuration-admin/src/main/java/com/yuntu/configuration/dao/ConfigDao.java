@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * Created by linxiaohui on 16/1/14.
+ *  16/1/14.
  */
 @Repository
 public interface ConfigDao extends JpaRepository<ConfigEntity,ConfigId>{

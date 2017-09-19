@@ -3,7 +3,7 @@ package com.yuntu.configuration.entity;
 import java.io.Serializable;
 
 /**
- * Created by linxiaohui on 16/1/26.
+ *  16/1/26.
  */
 @SuppressWarnings("serial")
 public class ConfigId implements Serializable {

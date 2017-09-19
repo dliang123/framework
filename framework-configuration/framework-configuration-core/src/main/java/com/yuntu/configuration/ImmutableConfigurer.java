@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.Properties;
 
 /**
- * Created by linxiaohui on 16/1/11.
+ *  16/1/11.
  */
 public class ImmutableConfigurer extends PropertyPlaceholderConfigurer  {
 

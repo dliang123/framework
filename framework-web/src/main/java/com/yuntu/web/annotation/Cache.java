@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import java.lang.annotation.*;
 
 /**
- * Created by linxiaohui on 15/11/12.
+ *  15/11/12.
  */
 
 @Target({ElementType.METHOD,ElementType.TYPE})

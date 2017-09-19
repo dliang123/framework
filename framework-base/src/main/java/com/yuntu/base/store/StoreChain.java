@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by linxiaohui on 15/11/16.
+ *
  */
 public class StoreChain implements Store{
 

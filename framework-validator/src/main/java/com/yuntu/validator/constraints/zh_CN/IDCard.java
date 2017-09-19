@@ -7,12 +7,12 @@ import java.lang.annotation.Target;
 
 
 /*
- * Author:   林晓辉
+ * Author:
  * Date:     15-1-22
  * Description: 身份证验证
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           15-1-22           00000001         创建文件
+ *            15-1-22           00000001         创建文件
  *
  */
 @Documented

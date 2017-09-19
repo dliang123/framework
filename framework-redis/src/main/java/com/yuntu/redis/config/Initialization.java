@@ -7,7 +7,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 
 /**
  * redis组件相关初始化
- * Created by 林晓辉 on 2014/10/10.
+ * Created by  on 2014/10/10.
  */
 public class Initialization {
 

@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by linxiaohui on 15/11/2.
+ *  15/11/2.
  */
 public class Request {
 

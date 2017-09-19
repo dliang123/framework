@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * Created by linxiaohui on 16/1/14.
+ *  16/1/14.
  */
 @Controller
 public class LoginController {

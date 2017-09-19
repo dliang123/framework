@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.concurrent.ThreadFactory;
 
 /**
- * Created by linxiaohui on 16/2/3.
+ *  16/2/3.
  */
 public class CuratorFrameworkFactoryBean implements FactoryBean<CuratorFramework> {
 

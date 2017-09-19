@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 查询规则集合( 根据指定逻辑链接 )
- * Created by linxiaohui on 2016/10/25.
+ *  2016/10/25.
  */
 public final class SpecificationComposite implements ISpecification {
 

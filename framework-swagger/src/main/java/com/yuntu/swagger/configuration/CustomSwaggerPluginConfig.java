@@ -1,10 +1,10 @@
 /**
  * <p>Copyright:Copyright(c) 2016</p>
- * <p>Company:上海运图投资有限公司</p>
+ * <p>Company:</p>
  * <p>包名:com.yuntu.fairy.cgi.swagger</p>
  * <p>文件名:SwaggerAPIConfig.java</p>
  * <p>类更新历史信息</p>
- * @todo <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a> 创建于 2016年2月29日 下午1:13:12
+ * @todo  创建于 2016年2月29日 下午1:13:12
  */
 package com.yuntu.swagger.configuration;
 
@@ -37,10 +37,10 @@ import com.yuntu.swagger.reader.CustomOperationParameterReader;
 /**
  * swagger插件配置
  * <p>
- * Company:上海运图投资有限公司
+ * Company:
  * </p>
  * 
- * @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a>
+ * @author
  * @date 2016年2月29日 下午1:13:12
  * @version 1.0.2016
  */

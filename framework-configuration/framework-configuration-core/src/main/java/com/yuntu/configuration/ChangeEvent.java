@@ -3,7 +3,7 @@ package com.yuntu.configuration;
 import org.springframework.util.Assert;
 
 /**
- * Created by linxiaohui on 16/1/12.
+ *  16/1/12.
  */
 public class ChangeEvent {
 

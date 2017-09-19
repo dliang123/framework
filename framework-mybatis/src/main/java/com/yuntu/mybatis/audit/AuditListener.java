@@ -14,12 +14,12 @@ import java.util.Date;
 
 /*
  * Copyright (C), 2012-2014
- * Author:   林晓辉
+ * Author:
  * Date:     14-11-27
  * Description: 实现审计功能的侦听器
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           14-11-27           00000001         创建文件
+ *            14-11-27           00000001         创建文件
  *
  */
 @SuppressWarnings({"rawtypes","unchecked"})

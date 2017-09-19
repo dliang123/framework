@@ -42,7 +42,7 @@
             </Policies>
             <DefaultRolloverStrategy max="40"/>
         </RollingFile>
-        <SMTP name="mail_api" subject="Car-${app_name}-Error-${app_env}" to="jackzhang@yaomaiche.com,icewang@yaomaiche.com" from="jackzhang@yaomaiche.com"
+        <SMTP name="mail_api" subject="Car-${app_name}-Error-${app_env}" to="jackzhang@yaomaiche.com,@yaomaiche.com" from="jackzhang@yaomaiche.com"
               smtpHost="smtp.exmail.qq.com" smtpPort="25" bufferSize="512" replyTo="jackzhang@yaomaiche.com" smtpDebug="false" smtpUsername="jackzhang@yaomaiche.com" smtpPassword="******"
               layout="[%t][%p][%d{yyyy-MM-dd HH\:mm\:ss,SSS}]-[%r][%l]%m%n"
                 >

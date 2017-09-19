@@ -2,7 +2,7 @@
 package com.yuntu.mq;
 
 /**
- * @author icewang
+ * @author
  * @date 2016年3月24日
  */
 public interface AMQPTemplate {

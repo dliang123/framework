@@ -2,7 +2,7 @@
 package com.yuntu.base.app;
 
 /**
- * @author icewang
+ * @author
  * @date 2016年12月27日
  */
 public enum BehaviorType {

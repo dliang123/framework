@@ -4,7 +4,7 @@ import com.yuntu.base.SimpleCompensationTemplate;
 import org.springframework.orm.ObjectOptimisticLockingFailureException;
 
 /**
- * Created by linxiaohui on 15/12/8.
+ *  15/12/8.
  */
 public abstract class ObjectOptimisticLockingCompensation<T> implements SimpleCompensationTemplate<T> {
 

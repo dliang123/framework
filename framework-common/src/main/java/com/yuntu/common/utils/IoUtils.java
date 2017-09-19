@@ -10,7 +10,7 @@ import java.nio.charset.Charset;
 
 /*
  * Copyright (C), 2012-2014
- * Author:   林晓辉
+ * Author:
  * Date:     14-11-4
  * Description: io 操作工具类
  * History: 变更记录

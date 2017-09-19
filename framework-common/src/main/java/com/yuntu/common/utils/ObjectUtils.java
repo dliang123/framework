@@ -875,7 +875,7 @@ public abstract class ObjectUtils {
     
     /**
     * 判断字符串是否为数字
-    * @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a>
+    * @author
     * @date 2016年7月8日  下午8:10:02
      */
     public static boolean isNumberic(String value){ 

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 基于资源的权限处理
- * Created by linxiaohui on 15/11/12.
+ *  15/11/12.
  */
 public class ResourcesAuthorityInterceptor extends HandlerInterceptorAdapter {
 

@@ -10,7 +10,7 @@ import org.springframework.core.annotation.AnnotationUtils;
 
 /**
  * 高地位算法 生成 id 侦听
- * Created by 林晓辉 on 2015/3/5.
+ * Created by  on 2015/3/5.
  */
 @SuppressWarnings("rawtypes")
 public class HiLoListener implements EntityListener {

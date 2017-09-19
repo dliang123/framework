@@ -5,7 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Created by linxiaohui on 16/1/14.
+ *  16/1/14.
  */
 public interface UserService {
 

@@ -1,10 +1,10 @@
 /**
  * <p>Copyright:Copyright(c) 2015</p>
- * <p>Company:上海运图投资有限公司</p>
+ * <p>Company:</p>
  * <p>包名:com.yuntu.redis.lock</p>
  * <p>文件名:RedisLock.java</p>
  * <p>类更新历史信息</p>
- * @todo <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a> 创建于 2015年12月22日 上午11:54:37
+ * @todo  创建于 2015年12月22日 上午11:54:37
  */
 package com.yuntu.redis.lock;
 
@@ -18,8 +18,8 @@ import com.yuntu.redis.util.RedisUtils;
 
 /** 
  * 基于Redis的分布式锁
- * <p>Company:上海运图投资有限公司</p>
- * @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a> 
+ * <p>Company:</p>
+ * @author
  * @date 2015年12月22日 上午11:54:37 
  * @version 1.0.2015
  */
@@ -38,7 +38,7 @@ public class RedisLock {
 	/**
 	* 获取锁，如果锁可用，立即返回true，否则返回false
 	* <p>默认过期时间3分钟</p>
-	* @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a>
+	* @author
 	* @date 2015年12月22日  下午2:15:39
 	 */
 	public Boolean tryLock(){
@@ -48,14 +48,14 @@ public class RedisLock {
 	/**
 	* 获取锁，如果锁可用，立即返回true，否则返回false
 	* @param expire 过期时间
-	* @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a>
+	* @author
 	* @date 2015年12月22日  下午2:15:39
 	 */	
 	public Boolean tryLock(final long expire){
 		return (Boolean) RedisUtils.execute(new RedisCallback<Boolean>() {
 			/* (non-Javadoc)
 			 * @see org.springframework.data.redis.core.RedisCallback#doInRedis(org.springframework.data.redis.connection.RedisConnection)
-			 * @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a>
+			 * @author
 			 * @date 2015年12月22日 下午2:28:14
 			 */
 			@SuppressWarnings("unchecked")
@@ -74,7 +74,7 @@ public class RedisLock {
 	
 	/**
 	* 释放锁
-	* @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a>
+	* @author
 	* @date 2015年12月22日  下午2:52:09
 	 */
 	@SuppressWarnings("unchecked")
@@ -83,7 +83,7 @@ public class RedisLock {
 			return (Boolean) RedisUtils.execute(new RedisCallback<Boolean>() {
 				/* (non-Javadoc)
 				 * @see org.springframework.data.redis.core.RedisCallback#doInRedis(org.springframework.data.redis.connection.RedisConnection)
-				 * @author <a href="mailto:fankenie@yaomaiche.com">vernal(聂超)</a>
+				 * @author
 				 * @date 2015年12月22日 下午2:28:14
 				 */
 				public Boolean doInRedis(RedisConnection connection)

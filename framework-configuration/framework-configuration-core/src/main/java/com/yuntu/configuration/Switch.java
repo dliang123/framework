@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  *
  * 适用于字段 基本数据类型,枚举(枚举目前只支持 name 形式)
  * ( 不适用于程序启动时就要验证的数值 ,同一开关的 key 不要映射两次)
- * Created by linxiaohui on 16/1/13.
+ *  16/1/13.
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)

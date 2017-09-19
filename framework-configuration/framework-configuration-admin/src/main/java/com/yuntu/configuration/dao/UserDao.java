@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created by linxiaohui on 16/1/14.
+ *  16/1/14.
  */
 @Repository
 public interface UserDao extends JpaRepository<UserEntity,Long> {

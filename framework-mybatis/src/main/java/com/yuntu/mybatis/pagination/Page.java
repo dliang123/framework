@@ -11,7 +11,7 @@ import java.util.List;
  * Description: 模块目的、功能描述      
  * History: 变更记录
  * <author>           <time>             <version>        <desc>
- * 林晓辉           14-10-23           00000001         创建文件
+ *            14-10-23           00000001         创建文件
  *
  */
 @SuppressWarnings("serial")

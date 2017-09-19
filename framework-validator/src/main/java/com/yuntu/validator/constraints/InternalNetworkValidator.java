@@ -5,7 +5,7 @@ import javax.validation.ConstraintValidatorContext;
 import java.util.regex.Pattern;
 
 /*
- * Author:   林晓辉
+ * Author:
  * Date:     15-1-23
  * Description: 模块目的、功能描述      
  * History: 变更记录

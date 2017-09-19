@@ -11,7 +11,7 @@ import com.yuntu.mq.AMQPTemplate;
 /**
  * RabbitMQ 实现
  * 
- * @author icewang
+ * @author
  * @date 2016年3月24日
  */
 public class RabbitMQTemplate implements AMQPTemplate {

@@ -3,8 +3,6 @@ package com.yuntu.base.store;
 import java.util.concurrent.TimeUnit;
 
 /*
- * Author:   林晓辉
- * Date:     14-11-6
  * Description: 模块目的、功能描述      
  * History: 变更记录
  * <author>           <time>             <version>        <desc>

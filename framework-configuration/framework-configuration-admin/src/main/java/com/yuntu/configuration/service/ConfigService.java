@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 /**
- * Created by linxiaohui on 16/1/25.
+ *  16/1/25.
  */
 public interface ConfigService {
 

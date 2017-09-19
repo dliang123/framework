@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created by linxiaohui on 15/11/5.
+ *  15/11/5.
  */
 
 @SuppressWarnings("serial")
