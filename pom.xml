@@ -18,6 +18,7 @@
 		<module>framework-base</module>
 		<module>framework-configuration</module>
 		<module>framework-web-example</module>
+		<module>framework-web-rawservlet</module>
 		<module>framework-redis</module>
 		<module>framework-zookeeper</module>
 		<module>framework-swagger</module>
