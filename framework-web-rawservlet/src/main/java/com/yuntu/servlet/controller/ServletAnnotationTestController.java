@@ -2,6 +2,7 @@ package com.yuntu.servlet.controller;
 
 
 import javax.servlet.ServletInputStream;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,7 +12,8 @@ import java.io.PrintWriter;
 /**
  * Created by jackdeng on 2017/9/27.
  */
-public class ServletTestController extends HttpServlet {
+@WebServlet("/ServletAnnotationTest")
+public class ServletAnnotationTestController extends HttpServlet {
 
     String message = "hello servlet";
 
@@ -21,7 +23,7 @@ public class ServletTestController extends HttpServlet {
         ServletInputStream inputStream = request.getInputStream();
 
         int len = 0;
-        byte[] bytes = new byte[inputStream.available()];
+        byte[] bytes = new byte[10240];
         String sss = "";
         while ((len = inputStream.read(bytes)) != -1) {
             sss = new String(bytes, 0, len);
