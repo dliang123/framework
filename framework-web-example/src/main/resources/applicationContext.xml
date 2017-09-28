@@ -28,10 +28,10 @@
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="ignoreUnresolvablePlaceholders" value="true"/>
-        <property name="location" value="a.properties"/>
+        <property name="location" value="*.properties"/>
         <property name="locations">
             <list>
-                <value>classpath:a.properties</value>
+                <value>classpath:*.properties</value>
                 <!--<value>http://www.baidu.com</value>-->
             </list>
         </property>
@@ -41,48 +41,39 @@
 
 
 
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="ignoreUnresolvablePlaceholders" value="true"/>
-        <property name="locations">
-            <list>
-                <value>classpath:b.properties</value>
-            </list>
-        </property>
 
-        <property name="order" value="2"/>
-    </bean>
 
-    <bean id="b" class="com.yuntu.web.example.controller.B">
-        <property name="aaa" value="${a1}"/>
-    </bean>
+    <!--<bean id="b" class="com.yuntu.web.example.controller.B">-->
+        <!--<property name="aaa" value="${a1}"/>-->
+    <!--</bean>-->
 
 
 
-    <bean id="curatorFramework" class="com.yuntu.zookeeper.CuratorFrameworkFactoryBean" lazy-init="false">
-        <property name="namespace" value="config"/>
-        <property name="connectString" value="10.16.36.81:2181,10.16.36.82:2181,10.16.36.83:2181"/>
-        <property name="connectionTimeoutMs" value="5000"/>
-        <property name="retryPolicy" >
-            <bean class="org.apache.curator.retry.RetryNTimes">
-                <constructor-arg name="n" value="3"/>
-                <constructor-arg name="sleepMsBetweenRetries" value="1000"/>
-            </bean>
-        </property>
-    </bean>
+    <!--<bean id="curatorFramework" class="com.yuntu.zookeeper.CuratorFrameworkFactoryBean" lazy-init="false">-->
+        <!--<property name="namespace" value="config"/>-->
+        <!--<property name="connectString" value="zk1.dev.yaomaiche.app:2181,zk2.dev.yaomaiche.app:2181,zk3.dev.yaomaiche.app:2181"/>-->
+        <!--<property name="connectionTimeoutMs" value="5000"/>-->
+        <!--<property name="retryPolicy" >-->
+            <!--<bean class="org.apache.curator.retry.RetryNTimes">-->
+                <!--<constructor-arg name="n" value="3"/>-->
+                <!--<constructor-arg name="sleepMsBetweenRetries" value="1000"/>-->
+            <!--</bean>-->
+        <!--</property>-->
+    <!--</bean>-->
 
     <bean id="application" class="com.yuntu.base.Application">
         <constructor-arg name="key" value="application_cdr"/>
     </bean>
 
-    <bean id="dynamicUpdateWatched" class="com.yuntu.configuration.support.zookeeper.ZookeeperDynamicUpdateWatched">
-        <property name="curatorClient" ref="curatorFramework"/>
-        <property name="application" ref="application"/>
-    </bean>
+    <!--<bean id="dynamicUpdateWatched" class="com.yuntu.configuration.support.zookeeper.ZookeeperDynamicUpdateWatched">-->
+        <!--<property name="curatorClient" ref="curatorFramework"/>-->
+        <!--<property name="application" ref="application"/>-->
+    <!--</bean>-->
 
 
-    <bean class="com.yuntu.configuration.DynamicUpdateConfigurer">
-        <property name="ignoreUnresolvablePlaceholders" value="true"/>
-        <property name="watched" ref="dynamicUpdateWatched"/>
-        <property name="order" value="1"/>
-    </bean>
+    <!--<bean class="com.yuntu.configuration.DynamicUpdateConfigurer">-->
+        <!--<property name="ignoreUnresolvablePlaceholders" value="true"/>-->
+        <!--<property name="watched" ref="dynamicUpdateWatched"/>-->
+        <!--<property name="order" value="1"/>-->
+    <!--</bean>-->
 </beans>
