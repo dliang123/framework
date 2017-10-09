@@ -22,11 +22,19 @@
             <artifactId>framework-configuration-support</artifactId>
         </dependency>
 
-
+        <dependency>
+            <groupId>com.yuntu.framework</groupId>
+            <artifactId>framework-jpa</artifactId>
+        </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
 

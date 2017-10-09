@@ -84,7 +84,7 @@
 		<mybatis-spring.version>1.2.3</mybatis-spring.version>
 		<mybatis.version>3.3.0</mybatis.version>
 
-		<mysql.version>5.1.32</mysql.version>
+		<mysql.driver.version>5.1.32</mysql.driver.version>
 		<druid.version>1.0.16</druid.version>
 
 		<guava.version>18.0</guava.version>
@@ -525,6 +525,11 @@
 				<groupId>com.sqljdbc4</groupId>
 				<artifactId>sqljdbc4</artifactId>
 				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.driver.version}</version>
 			</dependency>
 			<!-- 数据源和驱动组件结束 -->
 

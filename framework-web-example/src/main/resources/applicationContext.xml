@@ -26,6 +26,7 @@
        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
    </context:component-scan>
 
+
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="ignoreUnresolvablePlaceholders" value="true"/>
         <property name="location" value="*.properties"/>
@@ -39,7 +40,61 @@
         <property name="order" value="3"/>
     </bean>
 
+    <!-- 数据源配置, 使用Tomcat JDBC连接池 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <!-- Connection Info -->
+        <property name="driverClassName" value="${jdbc.driver}" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+        <!-- 开启监控 -->
+        <property name="filters" value="stat" />
+        <property name="maxActive" value="${jdbc.pool.maxActive}" />
+        <property name="initialSize" value="${jdbc.pool.initialSize}" />
+        <property name="maxWait" value="${jdbc.pool.maxWait}" />
+        <property name="minIdle" value="${jdbc.pool.minIdle}" />
+        <!-- 连接Idle半个小时后超时，每15分钟检查一次 -->
+        <property name="timeBetweenEvictionRunsMillis" value="900000" />
+        <property name="minEvictableIdleTimeMillis" value="1800000" />
+        <property name="validationQuery" value="SELECT 'x'" />
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+        <property name="poolPreparedStatements" value="true" />
+        <property name="maxOpenPreparedStatements" value="200" />
+    </bean>
 
+    <!-- Jpa Entity Manager 配置 -->
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan" value="com.yuntu"/>
+        <property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter"/>
+        <property name="jpaProperties">
+            <props>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+                <!-- 命名规则 My_NAME->MyName -->
+                <prop key="hibernate.physical_naming_strategy">com.yuntu.jpa.naming.PhysicalNamingStrategy</prop>
+                <!-- 批量操作批次大小 -->
+                <prop key="hibernate.jdbc.batch_size">${hibernate.batch_size}</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="hibernateJpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+    <!-- JSR303 Validator定义 -->
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+    <!-- Jpa 事务配置 -->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
+    </bean>
+    <!-- 使用annotation定义事务 -->
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
+
+    <!-- Spring Data Jpa配置 -->
+    <jpa:auditing  />
+    <jpa:repositories base-package="com.yuntu.web.core.dao" factory-class="com.yuntu.jpa.extend.JpaRepositoryFactoryBeanExt"/>
 
 
 
