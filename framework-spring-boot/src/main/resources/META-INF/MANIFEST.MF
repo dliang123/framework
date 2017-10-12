@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Class-Path: libs/spring-aop-4.3.6.RELEASE.jar libs/slf4j-api-1.7.13.ja
+ r libs/spring-beans-4.3.6.RELEASE.jar libs/jackson-annotations-2.7.4.
+ jar libs/hibernate-validator-5.0.3.Final.jar libs/spring-boot-starter
+ -web-1.5.7.RELEASE.jar libs/spring-boot-1.5.7.RELEASE.jar libs/logbac
+ k-core-1.1.11.jar libs/spring-core-4.3.6.RELEASE.jar libs/jackson-cor
+ e-2.7.4.jar libs/spring-web-4.3.6.RELEASE.jar libs/spring-boot-autoco
+ nfigure-1.5.7.RELEASE.jar libs/tomcat-embed-core-8.5.20.jar libs/spri
+ ng-expression-4.3.6.RELEASE.jar libs/log4j-over-slf4j-1.7.25.jar libs
+ /tomcat-embed-el-8.5.20.jar libs/spring-context-4.3.6.RELEASE.jar lib
+ s/tomcat-embed-websocket-8.5.20.jar libs/validation-api-1.1.0.Final.j
+ ar libs/jul-to-slf4j-1.7.25.jar libs/logback-classic-1.1.11.jar libs/
+ spring-boot-starter-1.5.7.RELEASE.jar libs/jcl-over-slf4j-1.7.25.jar 
+ libs/jackson-databind-2.7.4.jar libs/snakeyaml-1.17.jar libs/jboss-lo
+ gging-3.3.0.Final.jar libs/spring-webmvc-4.3.6.RELEASE.jar libs/sprin
+ g-boot-starter-logging-1.5.7.RELEASE.jar libs/spring-boot-starter-tom
+ cat-1.5.7.RELEASE.jar libs/classmate-1.1.0.jar
+Main-Class: com.yuntu.spring.boot.TestController
+
